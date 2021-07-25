@@ -1,0 +1,31 @@
+<div class="expenditure-table-container mt-3">
+    <table class="table expenditure-table mb-0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha</th>
+                <th>Detalle</th>
+                <th>Costo</th>
+                <th style="text-align: center;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let expenditure of expenditures">
+                <th>{{expenditure.id}}</th>
+                <th>{{expenditure.date}}</th>
+                <th>{{expenditure.detail}}</th>
+                <th>{{expenditure.cost}}</th>
+                <th>
+                    <div class="d-flex justify-content-around">
+                        <span>
+                            <i class="fa fa-edit edit-icon icon"></i>
+                        </span>
+                        <span>
+                            <i class="fa fa-trash remove-icon icon"></i>
+                        </span>
+                    </div>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

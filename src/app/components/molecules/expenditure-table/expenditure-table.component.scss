@@ -1,0 +1,16 @@
+.expenditure-table-container {
+    border-radius: 10px;
+    overflow: auto;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .6);
+    height: 350px;
+}
+
+.expenditure-table {
+    background-color: white;
+    overflow: hidden;
+    
+}
+
+.icon {
+    cursor: pointer;
+}

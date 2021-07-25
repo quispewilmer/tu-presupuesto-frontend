@@ -1,0 +1,14 @@
+.sidebar {
+    background-color: #222;
+    height: 100%;
+    position: relative;
+    box-shadow: 4px 0px 8px rgba(0, 0, 0, .6);
+    color: white;
+
+    &__username {
+        font-size: 1.6em;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+    }
+}

@@ -1,0 +1,20 @@
+.add-expenditure__button {
+    cursor: pointer;
+    background-color: #222;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .6);
+    display: inline-block;
+    transition: all .3s;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #222;
+    font-weight: bold;
+    
+    &:hover {
+        color: #222;
+        background-color: white;
+    }
+}

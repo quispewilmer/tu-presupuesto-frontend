@@ -1,0 +1,11 @@
+.main {
+    background-color: #eee;
+    min-height: 100vh;
+
+    &__title {
+        font-size: 2.6em;
+        font-weight: bold;
+        text-align: center;
+        display: block;
+    }
+}
