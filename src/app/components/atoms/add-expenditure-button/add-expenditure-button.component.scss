@@ -1,6 +1,6 @@
 .add-expenditure__button {
     cursor: pointer;
-    background-color: #222;
+    background-color: #005524;
     border-radius: 10px;
     color: white;
     text-align: center;
@@ -10,11 +10,16 @@
     transition: all .3s;
     border-width: 2px;
     border-style: solid;
-    border-color: #222;
+    border-color: #005524;
     font-weight: bold;
     
     &:hover {
-        color: #222;
+        color: #005524;
         background-color: white;
     }
+}
+
+.form-control__cost::-webkit-outer-spin-button,
+.form-control__cost::-webkit-inner-spin-button {
+    appearance: none;
 }

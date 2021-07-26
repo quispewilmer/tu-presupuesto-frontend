@@ -10,21 +10,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let expenditure of expenditures">
-                <th>{{expenditure.id}}</th>
-                <th>{{expenditure.date}}</th>
-                <th>{{expenditure.detail}}</th>
-                <th>{{expenditure.cost}}</th>
-                <th>
+            <tr *ngFor="let expenditure of expenditures; let i = index">
+                <td>{{expenditure.id}}</td>
+                <td>{{expenditure.date}}</td>
+                <td>{{expenditure.detail}}</td>
+                <td>S/ {{expenditure.cost}}</td>
+                <td>
                     <div class="d-flex justify-content-around">
-                        <span>
+                        <span title="Editar" (click)="updateExpenditure(expenditure.id)">
                             <i class="fa fa-edit edit-icon icon"></i>
                         </span>
-                        <span>
+                        <span title="Eliminar" (click)="deleteExpenditure(expenditure.id)">
                             <i class="fa fa-trash remove-icon icon"></i>
                         </span>
                     </div>
-                </th>
+                </td>
             </tr>
         </tbody>
     </table>

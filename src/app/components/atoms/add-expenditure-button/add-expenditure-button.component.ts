@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Form, FormBuilder, FormGroup } from '@angular/forms';
 import { Expenditure } from 'src/app/expenditure';
 
 @Component({
@@ -9,9 +9,10 @@ import { Expenditure } from 'src/app/expenditure';
 })
 export class AddExpenditureButtonComponent implements OnInit {
   form:FormGroup;
+  id: number | undefined;
 
   @Output()
-  sendData:EventEmitter<Expenditure> = new EventEmitter<Expenditure>();
+  addExpenditure:EventEmitter<Expenditure> = new EventEmitter<Expenditure>();
 
   constructor(private formBuilder:FormBuilder) { 
     this.form = this.formBuilder.group({
@@ -24,17 +25,16 @@ export class AddExpenditureButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addExpenditure() {
-    console.log(this.form);
+  addExpenditureF() {
     const expenditure:any = {
       date: this.form.get("date")?.value,
       detail: this.form.get("detail")?.value,
       cost: this.form.get("cost")?.value
-    }
-    this.sendData.emit(expenditure);
+    };
+    this.addExpenditure.emit(expenditure);
   }
 
-  sendDataFromForm(event:any) {
-    console.log("Hola mundo");
+  updateExpenditureF(expenditure: any) {
+    this.addExpenditure.emit(expenditure)
   }
 }

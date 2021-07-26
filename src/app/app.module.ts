@@ -10,6 +10,7 @@ import { ImageProfileComponent } from './components/atoms/image-profile/image-pr
 import { AddExpenditureButtonComponent } from './components/atoms/add-expenditure-button/add-expenditure-button.component';
 import { ExpenditureTableComponent } from './components/molecules/expenditure-table/expenditure-table.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,14 @@
 .expenditure-table {
     background-color: white;
     overflow: hidden;
-    
+}
+
+.expenditure-table th {
+    color: #005524;
+}
+
+.expenditure-table tr:nth-child(even) {
+    background-color: rgba($color: #005524, $alpha: 0.1);
 }
 
 .icon {

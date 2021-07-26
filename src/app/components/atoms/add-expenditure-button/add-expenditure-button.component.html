@@ -1,27 +1,27 @@
 <section class="add-expenditure">
-    <form action="" [formGroup]="form" (ngSubmit)="addExpenditure()" (submit)="sendDataFromForm($event)">
+    <form action="" [formGroup]="form" (ngSubmit)="addExpenditureF()">
         <div class="form-group row mb-3">
             <div class="col-md-3">
                 <label for="inputDate" class="col-form-label">Fecha:</label>
                 <div class="col">
-                    <input formControlName="date" type="date" class="form-control" id="inputDate" placeholder="Fecha">
+                    <input formControlName="date" type="date" class="form-control form-control__date" id="inputDate" placeholder="Fecha" required>
                 </div>
             </div>
             <div class="col-md-7">
                 <label for="inputDetail" class="col-form-label">Detalle:</label>
                 <div class="col">
-                    <input formControlName="detail" type="text" class="form-control" id="inputDetail" placeholder="Detalle">
+                    <input formControlName="detail" type="text" class="form-control form-control__detail" id="inputDetail" placeholder="Detalle" required>
                 </div>
             </div>
             <div class="col-md-2">
                 <label for="inputCost" class="col-form-label">Costo:</label>
                 <div class="col">
-                    <input formControlName="cost" type="text" class="form-control" id="inputCost" placeholder="Costo">
+                    <input formControlName="cost" type="number" class="form-control form-control__cost" id="inputCost" placeholder="Costo" maxlength="10" required>
                 </div>
             </div>
         </div>
         <button class="add-expenditure__button">
-            Añadir Gasto
+            Aceptar
         </button>
     </form>
 </section>
