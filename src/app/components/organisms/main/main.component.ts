@@ -11,6 +11,7 @@ export class MainComponent implements OnInit {
 
   expenditures:Expenditure[] = [
   ];
+  idToEdit:number = 0;
 
   constructor(
     private _expenditureService: ExpenditureService
@@ -39,6 +40,6 @@ export class MainComponent implements OnInit {
   }
 
   editExpenditure(event:any) {
-    
+    this.idToEdit = event;
   }
 }

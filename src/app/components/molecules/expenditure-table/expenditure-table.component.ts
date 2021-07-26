@@ -39,7 +39,7 @@ export class ExpenditureTableComponent implements OnInit {
     });
   }
 
-  updateExpenditure(id:number) {
-    console.log(id);
+  updateExpenditure(id:any) {
+    this.edit.emit(id);
   }
 }

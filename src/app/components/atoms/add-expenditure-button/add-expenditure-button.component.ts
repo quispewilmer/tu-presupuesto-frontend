@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Form, FormBuilder, FormGroup } from '@angular/forms';
 import { Expenditure } from 'src/app/expenditure';
 
@@ -10,6 +10,9 @@ import { Expenditure } from 'src/app/expenditure';
 export class AddExpenditureButtonComponent implements OnInit {
   form:FormGroup;
   id: number | undefined;
+
+  @Input()
+  idToEdit: number = 0;
 
   @Output()
   addExpenditure:EventEmitter<Expenditure> = new EventEmitter<Expenditure>();
